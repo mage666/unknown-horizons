@@ -76,6 +76,8 @@ class ConcreteObject(WorldObject):
 		Scheduler().add_new_object( Callback(set_action_runtime, self, runtime), self, run_in=0)
 
 	def act(self, action, facing_loc=None, repeating=False):
+		import traceback; traceback.print_stack()
+		print self, ' to ', action, facing_loc
 		if not self.has_action(action):
 			action = 'idle'
 		# TODO This should not happen, this is a fix for the component introduction

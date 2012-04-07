@@ -80,6 +80,7 @@ class Unit(MovingObject):
 		@param instance: fife.Instance
 		@param action: string representing the action that is finished.
 		"""
+		return
 		location = fife.Location(self._instance.getLocation().getLayer())
 		location.setExactLayerCoordinates(fife.ExactModelCoordinate( \
 			self.position.x + self.position.x - self.last_position.x, \
